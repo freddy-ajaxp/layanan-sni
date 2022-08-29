@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | General Form Elements</title>
+    <title>AdminLTE 3 | Pengaturan Watermark</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -12,12 +12,18 @@
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
-    <!-- Bootstrap4 Duallistbox -->
-    <link rel="stylesheet" href="../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
-
+    <!-- Summernote -->
+    <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -240,12 +246,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Formulir Unduh</h1>
+                            <h1>Pengaturan Watermark</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">General Form</li>
+                                <li class="breadcrumb-item active">Daftar Pengaturan Watermark</li>
                             </ol>
                         </div>
                     </div>
@@ -255,149 +261,168 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid">
+                <div class="col-12">
                     <div class="row">
-                        <!-- left column -->
-                        <div class="col-md-12">
-                            <!-- general form elements -->
-                            <div class="card card-primary">
+                        <div class="col-12">
+                            <div class="card card-default">
                                 <div class="card-header">
-                                    <h3 class="card-title"></h3>
+                                    <h3 class="card-title">Pengaturan Watermark</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <!-- /.card-header -->
-                                <!-- form start -->
-                                <form>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="callout callout-info">
-                                                    <h5><i class="fas fa-info"></i> Catatan:</h5>
-
-                                                    file formulir permohonan unduh dan informasi lebih lanjut dapat dilihat <a href="./faq.html">disini</a>.
-                                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="callout callout-info">
+                                                <h5><i class="fas fa-info"></i> Info:</h5>
+                                                Pengaturan watermark (font, ukuran font, serta posisi) akan berpengaruh untuk tiap watermark. pengaturan yang ada masih perkiraan.
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label>Pindahkan SNI yang diinginkan ke kolom sebelah kanan</label>
-                                                            <select class="duallistbox" multiple="multiple">
-                                                                <option>SNI ISO/IEC 27001:2013</option>
-                                                                <option>SNI ISO/IEC 27002:2014</option>
-                                                                <option>SNI ISO/IEC 27003:2017</option>
-                                                            </select>
-                                                        </div>
-                                                        <!-- /.form-group -->
-                                                    </div>
-                                                    <!-- /.col -->
-                                                </div>
-                                                <!-- /.row -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Isi Watermark (untuk generate contoh)</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Isi Watermark">
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Nama Pemohon</label>
-                                                    <input disabled type="email" class="form-control" id="exampleInputEmail1" value="otomatis menyesuaikan akun yg digunakan">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">jabatan Pemohon</label>
-                                                    <input disabled type="email" class="form-control" id="exampleInputEmail1" value="otomatis menyesuaikan akun yg digunakan">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email Pemohon</label>
-                                                    <input disabled type="email" class="form-control" id="exampleInputEmail1" value="otomatis menyesuaikan akun yg digunakan">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Unit Kerja</label>
-                                                    <input disabled type="email" class="form-control" id="exampleInputEmail1" value="otomatis menyesuaikan akun yg digunakan">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Tujuan Penggunaan</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tujuan penggunaan dokumen">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Data Pimpinan Setingkat Eselon II</label>
-                                                    <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Nama Pimpinan</option>
-                                                    <option>Nama Pimpinan</option>
-                                                    <option>Nama Pimpinan</option>
-                                                    <option>Nama Pimpinan</option>
-                                                    <option>Nama Pimpinan</option>
-                                                    <option>Nama Pimpinan</option>
+                                            <div class="form-group">
+                                                <label>Font</label>
+                                                <select class="form-control select2" style="width: 100%;">
+                                                    <option selected="selected">Times New Roman</option>
+                                                    <option>Arial</option>
+                                                    <option>Arial Black</option>
+                                                    <option>Calibri</option>
+                                                    <option>Dll...</option>
                                                 </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Jabatan Pimpinan</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Isi Jabatan Pimpinan">
-                                                </div>
-                                                <label for="exampleInputFile">File Formulir Permohonan Unduh</label>
-                                                <div class="input-group">
-                                                    <div class="custom-file">
-                                                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                                    </div>
-                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Ukuran Kertas</label>
+                                                <select class="form-control select2" style="width: 100%;">
+                                                    <option selected="selected">A4 (8.27 x 11.69 in)</option>
+                                                    <option>F4 (8.5 x 13 in)</option>
+                                                    <option>Dll...</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Ukuran Font</label>
+                                                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="ukuran font">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Color picker:</label>
+                                                <input type="text" class="form-control my-colorpicker1">
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>horizontal (- ke kiri/+ ke kanan dalam inchi)</label>
+                                                <input step=".1" type="number" class="form-control" id="exampleInputEmail1" placeholder="letak horizontal">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>vertical (- ke bawah/+ ke atas dalam inchi)</label>
+                                                <input step=".1" type="number" class="form-control" id="exampleInputEmail1" placeholder="letak vertical">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>rotasi (-360 - 360)</label>
+                                                <input step=".1" type="number" class="form-control" id="exampleInputEmail1" placeholder="besar rotasi">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>opacity (0 - 100)</label>
+                                                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="opacity">
                                             </div>
                                         </div>
                                         <!-- /.col -->
+                                    </div>
+                                    <!-- /.row -->
 
-                                    </div>
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary">Unduh</button>
-                                    </div>
-                                </form>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button id="saveWM" type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan</button>
+                                    <a href="http://www.a-pdf.com/watermark/examples/sample(rotatetext).pdf" target="_blank" type="button" class="btn btn-info float-right"><i class="fas fa-download"></i> Generate Contoh</a>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-                <!-- /.row -->
+            </section>
+            <!-- /.content -->
         </div>
-        <!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.2.0
-        </div>
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-    </footer>
+        <!-- /.content-wrapper -->
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+        <footer class="main-footer ">
+            <div class="float-right d-none d-sm-block ">
+                <b>Version</b> 3.2.0
+            </div>
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io ">AdminLTE.io</a>.</strong> All rights reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark ">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="../plugins/jquery/jquery.min.js"></script>
+    <script src="../plugins/jquery/jquery.min.js "></script>
     <!-- Bootstrap 4 -->
-    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- bs-custom-file-input -->
-    <script src="../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
     <!-- AdminLTE App -->
-    <script src="../dist/js/adminlte.min.js"></script>
-    <!-- Bootstrap4 Duallistbox -->
-    <script src="../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="../dist/js/adminlte.min.js "></script>
+
+    <!-- summernote -->
+    <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js "></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js "></script>
+    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js "></script>
+    <script src="../plugins/jszip/jszip.min.js "></script>
+    <script src="../plugins/pdfmake/pdfmake.min.js "></script>
+    <script src="../plugins/pdfmake/vfs_fonts.js "></script>
+    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js "></script>
+    <script src="../plugins/datatables-buttons/js/buttons.print.min.js "></script>
+    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js "></script>
     <!-- Page specific script -->
     <script>
         $(function() {
-            bsCustomFileInput.init();
-        });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            // Summernote
+            $('#summernote').summernote({
+                airMode: false,
+            });
+            //Colorpicker
+            $('.my-colorpicker1').colorpicker()
 
-        //Bootstrap Duallistbox
-        $('.duallistbox').bootstrapDualListbox()
+            $("#saveWM").click(function() {
+                alert("Berhasil disimpan");
+            });
+        })
     </script>
-
 </body>
 
 </html>
