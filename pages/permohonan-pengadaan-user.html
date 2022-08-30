@@ -274,7 +274,7 @@
                                     <div class="col-12 col-sm-4">
                                         <div class="info-box bg-light">
                                             <div class="info-box-content">
-                                                <span class="info-box-text text-center text-muted">Menunggu persetujuan</span>
+                                                <span class="info-box-text text-center text-muted">Status Sekarang</span>
                                                 <span class="info-box-number text-center text-muted mb-0"><span class="badge bg-danger">ditolak</span></span>
                                             </div>
                                         </div>
@@ -317,7 +317,7 @@
                                                         <div class="form-group">
                                                             <div class="form-group">
                                                                 <label>Respon</label>
-                                                                <select class="form-control select2" style="width: 100%;">
+                                                                <select disabled class="form-control select2" style="width: 100%;">
                                                                 <option>Tolak</option>
                                                                 <option>Setujui</option>
                                                             </select>
@@ -327,17 +327,12 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1">Alasan</label>
-                                                            <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tujuan penggunaan dokumen"> -->
-                                                            <textarea class="form-control" id="w3review" name="w3review" rows="4" cols="50">Alasan oleh Pemeriksa/Penyetuju terkait penolakan</textarea>
+                                                            <textarea disabled class="form-control" id="w3review" name="w3review" rows="4" cols="50">Alasan oleh Pemeriksa/Penyetuju terkait penolakan</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card-footer">
-                                                <button class="btn btn-info" id="approveBtn">
-                                                    <i class="fa fa-check" aria-hidden="true"> </i> Submit
-                                                </button>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -471,13 +466,6 @@
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
-
-
-    <script>
-        $("#approveBtn").click(function() {
-            alert('respon berhasil diberikan')
-        });
-    </script>
 </body>
 
 </html>
