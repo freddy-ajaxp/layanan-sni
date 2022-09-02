@@ -18,8 +18,7 @@ $(function() {
             labels: ['January', 'February', 'March', 'May', 'June', 'July', 'August'],
             datasets: [{
                 type: 'line',
-                lineTension: 0,
-                data: [100, 120, 170, 167, 180, 177, 160],
+                data: [12, 12, 17, 13, 6, 10, 2],
                 backgroundColor: 'transparent',
                 borderColor: '#007bff',
                 pointBorderColor: '#007bff',
@@ -27,11 +26,10 @@ $(function() {
                 fill: false
                     // pointHoverBackgroundColor: '#007bff',
                     // pointHoverBorderColor    : '#007bff'
-            }]
+            }, ]
         },
         options: {
             maintainAspectRatio: false,
-
             tooltips: {
                 mode: mode,
                 intersect: intersect
@@ -54,7 +52,7 @@ $(function() {
                     },
                     ticks: $.extend({
                         beginAtZero: true,
-                        suggestedMax: 200
+                        suggestedMax: 25
                     }, ticksStyle)
                 }],
                 xAxes: [{
@@ -75,7 +73,7 @@ $(function() {
             labels: ['January', 'February', 'March', 'May', 'June', 'July', 'August'],
             datasets: [{
                 type: 'line',
-                data: [6, 8, 7, 2, 4, 3, 4],
+                data: [0, 0, 0, 0, 0, 0, 2],
                 backgroundColor: 'tansparent',
                 borderColor: '#ced4da',
                 pointBorderColor: '#ced4da',

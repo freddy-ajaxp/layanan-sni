@@ -4,23 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Cari SNI</title>
+    <title>AdminLTE 3 | Log</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
-    <!-- Select2 -->
-    <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
 </head>
 
 <body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -196,107 +196,127 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Statistik - Uker D11</h1>
+                            <h1>Superadmin</h1>
                         </div>
-                        <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Statistik</a></li>
-                                <li class="breadcrumb-item"><a href="#">Statistik Unit Kerja</a></li>
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Daftar log</li>
                             </ol>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
-
-            <!-- Main content -->
-            <section class="content">
-                <div class="container-fluid">
-                    <!-- Small boxes (Stat box) -->
-                    <div class="row">
-
-                    </div>
-                    <!-- /.row -->
-                    <!-- <button class="btn btn-danger" id="update">TEST</button> -->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header border-0">
-                                    <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">Jumlah Pengunjung</h3>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex">
-                                        <p class="d-flex flex-column">
-                                            <span class="text-bold text-lg">72</span>
-                                            <span>Total Kunjungan</span>
-                                        </p>
-
-                                    </div>
-                                    <!-- /.d-flex -->
-
-                                    <div class="position-relative mb-4">
-                                        <canvas id="accessChart" height="200"></canvas>
-                                    </div>
-
-                                    <div class="d-flex flex-row justify-content-end">
-                                        <span class="mr-2">
-                                            <i class="fas fa-square text-primary"></i> Jumlah Akses
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.card -->
-
-
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header border-0">
-                                    <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">Jumlah Unduh</h3>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex">
-                                        <p class="d-flex flex-column">
-                                            <span class="text-bold text-lg">2</span>
-                                            <span>Jumlah Unduh Total</span>
-                                        </p>
-
-                                    </div>
-                                    <!-- /.d-flex -->
-
-                                    <div class="position-relative mb-4">
-                                        <canvas id="downloadChart" height="200"></canvas>
-                                    </div>
-
-                                    <div class="d-flex flex-row justify-content-end">
-                                        <span>
-                                            <i class="fas fa-square text-gray"></i> Jumlah Unduh
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.card -->
-
-
                         </div>
                     </div>
                 </div>
                 <!-- /.container-fluid -->
             </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- Default box -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Daftar Log</h3>
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 table-responsive">
+                                <table id="example1" class="table table-bordered table-hover display">
+                                    <thead>
+                                        <tr>
+                                            <th>Tanggal Log</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3-Aug-2022</td>
+                                            <td>
+                                                <a href="#" target="__blank">
+                                                    <button class="btn btn-default sm"><i class="fas fa-download"></i> download</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Daftar Pengguna</h3>
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-12 table-responsive">
+                                <table id="example2" class="table table-bordered table-hover display">
+                                    <thead>
+                                        <tr>
+                                            <th>Nama</th>
+                                            <th>Unit</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Freddy Ajax Pratama</td>
+                                            <td>D13</td>
+                                            <td>Pemeriksa</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default">Ubah Status</button>
+                                                    <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                                      <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a class="dropdown-item" href="#">Penyetuju</a>
+                                                        <a class="dropdown-item" href="#">Pemeriksa</a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">User Biasa</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Pegawai lainnya</td>
+                                            <td>D..</td>
+                                            <td>User</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default">Ubah Status</button>
+                                                    <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                                      <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a class="dropdown-item" href="#">Penyetuju</a>
+                                                        <a class="dropdown-item" href="#">Pemeriksa</a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">User Biasa</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </section>
             <!-- /.content -->
         </div>
+        <!-- /.content-wrapper -->
 
         <footer class="main-footer ">
             <div class="float-right d-none d-sm-block ">
@@ -317,27 +337,44 @@
     <script src="../plugins/jquery/jquery.min.js "></script>
     <!-- Bootstrap 4 -->
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
-    <!-- Select2 -->
-    <script src="../plugins/select2/js/select2.full.min.js "></script>
     <!-- DataTables  & Plugins -->
-    <script src="../plugins/datatables/jquery.dataTables.min.js "></script>
-    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js "></script>
-    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js "></script>
-    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js "></script>
-    <script src="../plugins/jszip/jszip.min.js "></script>
-    <script src="../plugins/pdfmake/pdfmake.min.js "></script>
-    <script src="../plugins/pdfmake/vfs_fonts.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.print.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js "></script>
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../plugins/jszip/jszip.min.js"></script>
+    <script src="../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js "></script>
-    <!-- OPTIONAL SCRIPTS -->
-    <script src="../plugins/chart.js/Chart.min.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../dist/js/pages/statistik-uker.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+
+
+            $('#example1').DataTable({
+                paging: false,
+                ordering: false,
+                info: false,
+            });
+
+            $('#example2').DataTable({
+                paging: false,
+                ordering: false,
+                info: false,
+            });
+
+            $(".dropdown-menu .dropdown-item").click(function() {
+                alert("Status berubah");
+            });
+        });
+    </script>
 </body>
 
 </html>

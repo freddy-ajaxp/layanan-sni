@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -51,6 +53,7 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
             <a href="../index.html" class="brand-link">
                 <img src="../dist/img/sni.png" alt="AdminLTE Logo" class="brand-image img-bordered elevation-3" style="opacity: .8; background-color: #FFFFFF;">
                 <span class="brand-text font-weight-light">Layanan SNI</span>
@@ -77,6 +80,14 @@
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/notifikasi-saya.html" class="nav-link">
+                                <i class="nav-icon fas fa-bell"></i>
+                                <p>
+                                    Notifikasi
                                 </p>
                             </a>
                         </li>
@@ -109,84 +120,33 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/permohonan-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
-                                <p>
-                                    Permohonan
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Permohonan User</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/permohonan-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan User</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Lainnya
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                        <li class="nav-item">
+                            <a href="../pages/statistik.html" class="nav-link">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>Statistik</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/statistik.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Statistik</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
                                 <i class="nav-icon fas fa-tools"></i>
-                                <p>
-                                    Aplikasi
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Pengaturan Petunjuk</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Petunjuk</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-watermark.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Watermark</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
                         <li class="nav-header">MENU USER</li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/sni-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>
-                                    SNI
-                                    <i class="right fas fa-angle-left"></i>
+                                    Baca SNI
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/sni-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>
-                                            SNI
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item ">
                             <a href="#" class="nav-link">
@@ -200,7 +160,7 @@
                                 <li class="nav-item">
                                     <a href="../pages/permohonan-unduh-baru.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan Unduh Baru</p>
+                                        <p>Permohonan Dokumen</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -237,7 +197,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Permohonan User</h1>
+                            <h1>Daftar permohonan SNI masuk</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -256,32 +216,33 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Daftar Permohonan</h3>
+                        <h3 class="card-title">Daftar permohonan SNI masuk</h3>
 
                     </div>
-                    <div class="card-body ">
-                        <div class="row">
-                            <div class="col-md-10 offset-md-1">
+                    <div class="card-body">
+                        <!-- filter cadangan -->
+                        <!-- <div class="row">
+                            <div class="col-lg-12">
                                 <div class="row">
                                     <div class="col-3">
                                         <div class="form-group">
                                             <label>Status:</label>
                                             <select class="form-control" style="width: 100%;">
-                                      <option>Menunggu Persetujuan</option>
-                                      <option>Selesai</option>
-                                      <option>Diverifikasi</option>
-                                      <option>Disetujui</option>
-                                      <option>Ditolak</option>
-                                    </select>
+                                                <option>Menunggu Persetujuan</option>
+                                                <option>Selesai</option>
+                                                <option>Diverifikasi</option>
+                                                <option>Disetujui</option>
+                                                <option>Ditolak</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-group">
                                             <label>Sort Order:</label>
                                             <select class="form-control" style="width: 100%;">
-                                      <option selected>Ascending</option>
-                                      <option>Descending</option>
-                                    </select>
+                                                <option selected>Ascending</option>
+                                                <option>Descending</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -292,22 +253,18 @@
                                                 <input type="search" class="form-control" placeholder="masukkan kata kunci">
                                                 <div class="input-group-append">
                                                     <button type="submit" class="btn btn-default">
-                                          <i class="fa fa-search"></i>
-                                        </button>
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
                                                 </div>
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <p align="center"> Dokumen yang Anda butuhkan tidak terdaftar? Ajukan
-                                    <a href="../pages/permohonan-pengadaan-baru.html">Permohonan Pengadaan</a>
-                                </p> -->
                             </div>
-                        </div>
-                        <br>
+                        </div> -->
                         <div class="row table-responsive">
-                            <table id="example2 " class="table table-bordered table-hover ">
+                            <table id="example1" class="table table-bordered table-hover ">
                                 <thead>
                                     <tr>
                                         <th>Pemohon</th>
@@ -327,11 +284,12 @@
                                         <td>Direktorat Kebijakan Teknologi Siber dan Sandi, Deputi I</td>
                                         <td>Tujuan digunakannya SNI ini adalah</td>
                                         <td>3-04-2022</td>
-                                        <td>Permohonan</td>
+                                        <td>Unduh</td>
                                         <td><span class="badge bg-default">Menunggu Persetujuan</span></td>
                                         <td>
                                             <a href="permohonan-detail-penyetuju.html" target="__blank">
-                                                <button class="btn btn-default sm"><i class="fas fa-eye"></i> detail</button>
+                                                <button class="btn btn-default sm"><i class="fas fa-eye"></i>
+                                                    detail</button>
                                             </a>
                                         </td>
                                     </tr>
@@ -341,12 +299,13 @@
                                         <td>Direktorat Strategi Keamanan Siber dan Sandi, Deputi I</td>
                                         <td>Tujuan digunakannya SNI ini adalah</td>
                                         <td>12-04-2022</td>
-                                        <td>Permohonan</td>
+                                        <td>Unduh</td>
                                         <td><span class="badge bg-default ">Menunggu Pemeriksaan</span></td>
 
                                         <td>
                                             <a href="permohonan-detail-pemeriksa.html" target="__blank">
-                                                <button class=" btn btn-default sm "><i class="fas fa-eye "></i> detail</button>
+                                                <button class=" btn btn-default sm "><i class="fas fa-eye "></i>
+                                                    detail</button>
                                             </a>
                                         </td>
                                     </tr>
@@ -356,11 +315,28 @@
                                         <td>Direktorat Keamanan Siber dan Sandi Pemerintah Daerah, Deputi III</td>
                                         <td>Tujuan digunakannya SNI ini</td>
                                         <td>27-04-2022</td>
-                                        <td>Pengadaan</td>
+                                        <td>SNI baru</td>
                                         <td><span class="badge bg-danger">Ditolak</span></td>
                                         <td>
                                             <a href="permohonan-detail2.html" target="__blank">
-                                                <button class="btn btn-default sm "><i class="fas fa-eye "></i> detail</button>
+                                                <button class="btn btn-default sm "><i class="fas fa-eye "></i>
+                                                    detail</button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Perkins</td>
+                                        <td>D13</td>
+                                        <td>Direktorat Strategi Keamanan Siber dan Sandi, Deputi I</td>
+                                        <td>Tujuan digunakannya SNI ini adalah</td>
+                                        <td>12-04-2022</td>
+                                        <td>Unduh</td>
+                                        <td><span class="badge bg-default ">Hold</span></td>
+
+                                        <td>
+                                            <a href="permohonan-detail-pemeriksa.html" target="__blank">
+                                                <button class=" btn btn-default sm "><i class="fas fa-eye "></i>
+                                                    detail</button>
                                             </a>
                                         </td>
                                     </tr>
@@ -410,6 +386,21 @@
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js "></script>
+    <!-- datatables -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js "></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js "></script>
+    <!-- page specific -->
+    <script>
+        $(document).ready(function() {
+            $('#example1').DataTable({
+                paging: false,
+                ordering: false,
+                info: false,
+            });
+        });
+    </script>
 </body>
 
 </html>

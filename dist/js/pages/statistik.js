@@ -13,9 +13,9 @@ var ticksStyle = {
 var mode = 'index'
 var intersect = true
 
-var $sniLineChart2 = $('#ukerLineChart')
+var $sniLineChart = $('#sniLineChart')
     // eslint-disable-next-line no-unused-vars
-var sniLineChart2 = new Chart($sniLineChart2, {
+var sniLineChart = new Chart($sniLineChart, {
     data: {
         labels: ['January', 'February', 'March', 'May', 'June', 'July', 'August'],
         datasets: [{
@@ -91,17 +91,22 @@ var sniLineChart2 = new Chart($sniLineChart2, {
 
 
 // Get context with jQuery - using jQuery's .get() method.
-var pieChartCanvas2 = $('#pieChart2').get(0).getContext('2d')
-var pieData2 = {
-    labels: [
-        'D1',
-        'D2',
-        'D3',
+var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
 
+var pieData = {
+    labels: [
+        'SNI ISO/IEC 27001:2013',
+        'SNI 8527-2018',
+        'SNI 8544-6-2018 ISO-IEC 27034-6-2016',
+        'SNI ISO IEC 19896-1-2018 (2021)',
+        'SNI ISO IEC 20085-2-2020 (2021)',
+        'SNI ISO IEC 27004-2016 (Ditetapkan oleh BSN tahun 2019)',
+        'SNI ISO IEC 27007-2017',
+        'SNI ISO IEC 27017-2015 (2021)_EN'
     ],
     datasets: [{
-        data: [70, 52, 69],
-        backgroundColor: ['#f56954', '#00a65a', '#f39c12']
+        data: [700, 500, 400, 600, 300, 100, 150, 350],
+        backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de', '#00a65a', '#f39c12']
     }]
 }
 
@@ -116,9 +121,9 @@ var pieOptions = {
     // Create pie or douhnut chart
     // You can switch between pie and douhnut using the method below.
     // eslint-disable-next-line no-unused-vars
-var pieChart2 = new Chart(pieChartCanvas2, {
+var pieChart = new Chart(pieChartCanvas, {
     type: 'doughnut',
-    data: pieData2,
+    data: pieData,
     options: {
         plugins: {
             legend: {
@@ -130,20 +135,20 @@ var pieChart2 = new Chart(pieChartCanvas2, {
 
 
 //ini untuk update data di line chart
-$(".ukerRandChartBtn").click(function() {
-    sniLineChart2.data.datasets.forEach(dataset => {
+$(".sniRandChartBtn").click(function() {
+    sniLineChart.data.datasets.forEach(dataset => {
         dataset.data = Array.from({ length: 7 }, () => Math.floor(Math.random() * 200));
     });
-    sniLineChart2.update();
+    sniLineChart.update();
     var $title = $(this).text();
-    $('#ukerLineChartTitle').text($title)
+    $('#sniLineChartTitle').text($title)
 });
 
 //ini untuk hide/show data dengan klik list SNI di tabel
-function toggleData2(button, category) {
-    pieChart2.toggleDataVisibility(category);
-    pieChart2.update();
-    if (pieChart2.getDataVisibility(category)) {
+function toggleData(button, category) {
+    pieChart.toggleDataVisibility(category);
+    pieChart.update();
+    if (pieChart.getDataVisibility(category)) {
         button.classList.remove('hidden');
     } else {
         button.classList.add('hidden');
@@ -151,17 +156,18 @@ function toggleData2(button, category) {
 }
 
 //reset tampilan pie chart jika user tidak ingin melihat semuanya grafik
-$("#clearUkerChartSwitch").change(function() {
+$("#clearChartSwitch").change(function() {
     if (this.checked) {
-        pieChart2.data.datasets[0].data.forEach(function(ds, index) {
-            pieChart2.toggleDataVisibility(index)
+        console.log(pieChart.data.datasets[0].data);
+        pieChart.data.datasets[0].data.forEach(function(ds, index) {
+            pieChart.toggleDataVisibility(index)
         });
     } else {
-        pieChart2.data.datasets[0].data.forEach(function(ds, index) {
-            pieChart2.toggleDataVisibility(index)
+        pieChart.data.datasets[0].data.forEach(function(ds, index) {
+            pieChart.toggleDataVisibility(index)
         });
     }
-    pieChart2.update();
+    pieChart.update();
 
 });
 

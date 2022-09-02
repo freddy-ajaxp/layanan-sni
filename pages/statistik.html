@@ -18,6 +18,24 @@
     <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- page specific scrollbar chart -->
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        
+         ::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        
+        .example {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -50,12 +68,14 @@
                         </a>
                     </div>
                 </li>
+
             </ul>
         </nav>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
             <a href="../index.html" class="brand-link">
                 <img src="../dist/img/sni.png" alt="AdminLTE Logo" class="brand-image img-bordered elevation-3" style="opacity: .8; background-color: #FFFFFF;">
                 <span class="brand-text font-weight-light">Layanan SNI</span>
@@ -82,6 +102,14 @@
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/notifikasi-saya.html" class="nav-link">
+                                <i class="nav-icon fas fa-bell"></i>
+                                <p>
+                                    Notifikasi
                                 </p>
                             </a>
                         </li>
@@ -114,84 +142,33 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/permohonan-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
-                                <p>
-                                    Permohonan
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Permohonan User</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/permohonan-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan User</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Lainnya
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                        <li class="nav-item">
+                            <a href="../pages/statistik.html" class="nav-link">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>Statistik</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/statistik.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Statistik</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
                                 <i class="nav-icon fas fa-tools"></i>
-                                <p>
-                                    Aplikasi
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Pengaturan Petunjuk</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Petunjuk</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-watermark.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Watermark</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
                         <li class="nav-header">MENU USER</li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/sni-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>
-                                    SNI
-                                    <i class="right fas fa-angle-left"></i>
+                                    Baca SNI
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/sni-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>
-                                            SNI
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item ">
                             <a href="#" class="nav-link">
@@ -205,7 +182,7 @@
                                 <li class="nav-item">
                                     <a href="../pages/permohonan-unduh-baru.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan Unduh Baru</p>
+                                        <p>Permohonan Dokumen</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -265,119 +242,328 @@
 
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Data Akses Dokumen</h3>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <div class="col-md-12 table-responsive">
-                                        <table id="example1" class="table table-bordered table-hover ">
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-center" style="width: 10%">Judul</th>
-                                                    <th class="text-center">#Akses Total</th>
-                                                    <th class="text-center">#Akses Bulan Ini</th>
-                                                    <th class="text-center">#Unduh Total</th>
-                                                    <th class="text-center">#Unduh Bulan Ini</th>
-                                                    <th class="text-center">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>SNI ISO-IEC 27001-2013</td>
-                                                    <td>86
-                                                    </td>
-                                                    <td>25</td>
-                                                    <td>4</td>
-                                                    <td>4</td>
-                                                    <td><a href="./statistik-dokumen.html" target="_blank"><button
-                                                            type="button" class="btn btn-primary">Detail</button></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>SNI ISO-IEC 27002-2014</td>
-                                                    <td>86
-                                                    </td>
-                                                    <td>25</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
-                                                    <td><a href="./statistik-dokumen.html" target="_blank"><button
-                                                            type="button" class="btn btn-primary">Detail</button></a>
-                                                </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Data Unit Kerja</h3>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <div class="col-md-12 table-responsive">
-                                        <table id="example2" class="table table-bordered table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-center">Setingkat Eselon II</th>
-                                                    <th class="text-center">#Akses Total</th>
-                                                    <th class="text-center">#Akses Bulan Ini</th>
-                                                    <th class="text-center">#Unduh Total</th>
-                                                    <th class="text-center">#Unduh Bulan Ini</th>
-                                                    <th class="text-center">#</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>D11</td>
-                                                    <td>72</td>
-                                                    <td>2</td>
-                                                    <td>2</td>
-                                                    <td>2</td>
-                                                    <td><a href="./statistik-uker.html" target="_blank"><button
-                                                            type="button" class="btn btn-primary">Detail</button></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>D12</td>
-                                                    <td>86</td>
-                                                    <td>12</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
-                                                    <td><a href="./statistik-uker.html" target="_blank"><button
-                                                            type="button" class="btn btn-primary">Detail</button></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>D13</td>
-                                                    <td>14</td>
-                                                    <td>11</td>
-                                                    <td>2</td>
-                                                    <td>2</td>
-                                                    <td><a href="./statistik-uker.html" target="_blank"><button
-                                                            type="button" class="btn btn-primary">Detail</button></a>
-                                                    </td>
-                                                </tr>
+                                    <h3 class="card-title">Data Kunjungan Semua SNI</h3>
 
-                                                </tfoot>
-                                        </table>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
                                     </div>
                                 </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="chart-responsive">
+                                                <canvas id="pieChart" height="150"></canvas>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="info-box mb-3 bg-info">
+                                                    <span class="info-box-icon"><i class="fas fa-eye"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Top dibaca</span>
+                                                        <span class="info-box-text">SNI ISO/IEC 27001:2013</span>
+                                                        <span class="info-box-number">125 kali</span>
+                                                    </div>
+                                                </div>
+                                                <div class="info-box mb-3 bg-success">
+                                                    <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Top diunduh</span>
+                                                        <span class="info-box-text">SNI ISO/IEC 27001:2013</span>
+                                                        <span class="info-box-number">12 kali</span>
+                                                    </div>
+                                                    <!-- /.info-box-content -->
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table id="pieChartTbl" class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Judul</th>
+                                                        <th>Toogle</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <!-- <button id="category0" class="triggerBtn" data-aidi="0" onclick="toggleData(this, 0)">category0</button> -->
+                                                            <!-- <button id="category0" class="triggerBtn" data-aidi=0>category0</button> -->
+
+                                                            <btn class="sniRandChartBtn">SNI ISO/IEC 27001:2013</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" class="triggerBtn" data-aidi="0" onclick="toggleData(this, 0)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="sniRandChartBtn">SNI 8527-2018</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData(this, 1)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="sniRandChartBtn">SNI 8544-6-2018 ISO-IEC 27034-6-2016</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData(this, 2)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="sniRandChartBtn">SNI ISO IEC 19896-1-2018 (2021)</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData(this, 3)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="sniRandChartBtn">SNI ISO IEC 20085-2-2020 (2021)</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData(this, 4)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="sniRandChartBtn">SNI ISO IEC 27004-2016 (Ditetapkan oleh BSN tahun 2019)</btn>
+                                                            </btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData(this, 5)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="sniRandChartBtn">SNI ISO IEC 27007-2017</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData(this, 6)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="sniRandChartBtn">SNI ISO IEC 27017-2015 (2021)_EN</btn>
+                                                            <td>
+                                                                <btn class="btn btn-sm" onclick="toggleData(this, 7)"><i class="fas fa-eye"></i></btn>
+                                                            </td>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+                                            <!-- <ul class="chart-legend clearfix" style="height: 200px; overflow: auto; ">
+                                                <li><i class="fa fa-circle text-danger"></i><a class="sniRandChartBtn">Chrome</a></li>
+                                                <li><i class="fa fa-circle text-success"></i><a class="sniRandChartBtn">Chrome</a></li> IE</li>
+                                                <li><i class="fa fa-circle text-warning"></i><a class="sniRandChartBtn">Chrome</a></li> FireFox</li>
+                                                <li><i class="fa fa-circle text-info"></i><a class="sniRandChartBtn">Chrome</a></li> Safari</li>
+                                                <li><i class="fa fa-circle text-primary"></i><a class="sniRandChartBtn">Chrome</a></li> Opera</li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+
+                                    <!-- /.row -->
+                                </div>
                                 <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="clearChartSwitch">
+                                                <label class="custom-control-label" for="clearChartSwitch">Sembunyikan/munculkan semua data</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.footer -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header border-0">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="card-title">Jumlah Akses Dokumen SNI</h3>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <p class="d-flex flex-column">
+                                            <span class="text-bold text-lg" id="sniLineChartTitle">SNI ISO/IEC 27001:2013</span>
+                                            <span class="text-bold text-sm">1.074 Baca</span>
+                                            <span class="text-bold text-sm">30 Unduh</span>
+                                        </p>
+
+                                    </div>
+                                    <!-- /.d-flex -->
+
+                                    <div class="position-relative mb-4">
+                                        <canvas id="sniLineChart" height="200"></canvas>
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-end">
+                                        <span class="mr-2">
+                                            <!-- <i class="fas fa-square text-primary"></i> Jumlah Akses
+                                            <i class="fas fa-square text-danger"></i> Jumlah Unduh -->
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.card -->
+
+
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Data Kunjungan Unit Kerja</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="chart-responsive">
+                                                <canvas id="pieChart2" height="150"></canvas>
+                                            </div>
+                                            <div class="row">
+                                                <div class="info-box mb-3 bg-info">
+                                                    <span class="info-box-icon"><i class="fas fa-eye"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Top mengakses</span>
+                                                        <span class="info-box-text">D11</span>
+                                                        <span class="info-box-number">70 kali</span>
+                                                    </div>
+                                                </div>
+                                                <div class="info-box mb-3 bg-success">
+                                                    <span class="info-box-icon"><i class="fas fa-cloud-download-alt"></i></span>
+
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Top mengunduh</span>
+                                                        <span class="info-box-text">D11</span>
+                                                        <span class="info-box-number">12 kali</span>
+                                                    </div>
+                                                    <!-- /.info-box-content -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table id="pieChartTbl2" class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Unit</th>
+                                                        <th>Toogle</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="ukerRandChartBtn">D11</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" class="triggerBtn" data-aidi="0" onclick="toggleData2(this, 0)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="ukerRandChartBtn">D12</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData2(this, 1)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <btn class="ukerRandChartBtn">D13</btn>
+                                                        </td>
+                                                        <td>
+                                                            <btn class="btn btn-sm" onclick="toggleData2(this, 2)"><i class="fas fa-eye"></i></btn>
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="clearUkerChartSwitch">
+                                                <label class="custom-control-label" for="clearUkerChartSwitch">Sembunyikan/munculkan semua data</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.footer -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header border-0">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="card-title">Jumlah Akses Unit Kerja</h3>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <p class="d-flex flex-column">
+                                            <span class="text-bold text-lg" id="ukerLineChartTitle">D1</span>
+                                            <span class="text-bold text-sm">1.074 Baca</span>
+                                            <span class="text-bold text-sm">30 Unduh</span>
+                                        </p>
+
+                                    </div>
+                                    <!-- /.d-flex -->
+
+                                    <div class="position-relative mb-4">
+                                        <canvas id="ukerLineChart" height="200"></canvas>
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-end">
+                                        <span class="mr-2">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+
+
+                        </div>
+                    </div>
                 </div>
-                <!-- /.container-fluid -->
             </section>
-            <!-- /.content -->
         </div>
 
         <footer class="main-footer ">
@@ -389,7 +575,7 @@
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark ">
-            <!-- Control sidebar content goes here -->
+            control sidebar
         </aside>
         <!-- /.control-sidebar -->
     </div>
@@ -414,16 +600,21 @@
     <script src="../plugins/datatables-buttons/js/buttons.html5.min.js "></script>
     <script src="../plugins/datatables-buttons/js/buttons.print.min.js "></script>
     <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js "></script>
+    <script src="../dist/js/pages/dataTables.fixedHeader.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js "></script>
-    <!--  -->
-    <script src="../dist/js/pages/dataTables.fixedHeader.min.js"></script>
+    <!-- ChartJS -->
+    <!-- <script src="../plugins/chart.js/Chart.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- select2 -->
     <script>
         $(function() {
             $('.select2').select2()
         });
     </script>
     <!-- Page specific script -->
+    <script src="../dist/js/pages/statistik.js"></script>
+    <script src="../dist/js/pages/statistik-uker.js"></script>
     <script>
         $(function() {
 
@@ -443,9 +634,34 @@
                 "info ": true,
                 "autoWidth ": true,
                 "responsive ": true,
+            });
 
+            $('#pieChartTbl').DataTable({
+                "dom": 'fp',
+                "pageLength": 5,
+                // "scrollY": '5px',
+                // "scrollCollapse": true,
+                "responsive ": true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
+            });
+
+            $('#pieChartTbl2').DataTable({
+                "dom": 'fp',
+                "pageLength": 5,
+                // "scrollY": '5px',
+                // "scrollCollapse": true,
+                "responsive ": true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
             });
         });
+    </script>
+    <script>
     </script>
 
 

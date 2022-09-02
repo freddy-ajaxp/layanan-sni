@@ -58,6 +58,7 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
             <a href="../index.html" class="brand-link">
                 <img src="../dist/img/sni.png" alt="AdminLTE Logo" class="brand-image img-bordered elevation-3" style="opacity: .8; background-color: #FFFFFF;">
                 <span class="brand-text font-weight-light">Layanan SNI</span>
@@ -84,6 +85,14 @@
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/notifikasi-saya.html" class="nav-link">
+                                <i class="nav-icon fas fa-bell"></i>
+                                <p>
+                                    Notifikasi
                                 </p>
                             </a>
                         </li>
@@ -116,84 +125,33 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/permohonan-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
-                                <p>
-                                    Permohonan
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Permohonan User</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/permohonan-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan User</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Lainnya
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                        <li class="nav-item">
+                            <a href="../pages/statistik.html" class="nav-link">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>Statistik</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/statistik.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Statistik</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
                                 <i class="nav-icon fas fa-tools"></i>
-                                <p>
-                                    Aplikasi
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Pengaturan Petunjuk</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Petunjuk</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-watermark.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Watermark</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
                         <li class="nav-header">MENU USER</li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/sni-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>
-                                    SNI
-                                    <i class="right fas fa-angle-left"></i>
+                                    Baca SNI
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/sni-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>
-                                            SNI
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item ">
                             <a href="#" class="nav-link">
@@ -207,7 +165,7 @@
                                 <li class="nav-item">
                                     <a href="../pages/permohonan-unduh-baru.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan Unduh Baru</p>
+                                        <p>Permohonan Dokumen</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -250,51 +208,6 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <form action="enhanced-results.html">
-                        <!-- <div class="row">
-                            <div class="col-md-10 offset-md-1">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="form-group">
-                                            <label>Order By:</label>
-                                            <select class="select2" style="width: 100%;">
-                        <option selected>Title</option>
-                        <option>Date</option>
-                      </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-group">
-                                            <label>Sort Order:</label>
-                                            <select class="select2" style="width: 100%;">
-                        <option selected>Ascending</option>
-                        <option>Descending</option>
-                      </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Order By:</label>
-                                            <div class="input-group mb-3">
-                                                <input type="search" class="form-control" placeholder="masukkan kata kunci">
-                                                <div class="input-group-append">
-                                                    <button type="submit" class="btn btn-default">
-                            <i class="fa fa-search"></i>
-                          </button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <p align="center"> Dokumen yang Anda butuhkan tidak terdaftar? Ajukan
-                                    <a href="../../pages/permohonan-pengadaan-baru.html">Permohonan Pengadaan</a>
-                                </p>
-
-                            </div>
-                        </div> -->
-                    </form>
                     <div class="row ">
                         <div class="col-12 ">
                             <div class="card ">
@@ -303,6 +216,9 @@
                                     <div class="card-tools">
                                         <a href="./sni-unggah.html" target="_blank" class="btn btn-sm btn-outline-info">
                                             <i class="fas fa-upload"></i> Unggah Dokumen Baru
+                                        </a>
+                                        <a href="https://www.w3.org/TR/PNG/iso_8859-1.txt" target="_blank" class="btn btn-sm btn-outline-success">
+                                            <i class="fas fa-download"></i> Unduh seluruh SNI
                                         </a>
                                     </div>
                                 </div>
@@ -437,68 +353,74 @@
     <!-- Page specific script -->
     <script>
         $(document).ready(function() {
-            // Setup - add a text input to each footer cell
-            $('#example1 thead tr')
-                .clone(true)
-                .addClass('filters')
-                .appendTo('#example1 thead');
+            // old datatable
+            // $('#example1 thead tr')
+            //     .clone(true)
+            //     .addClass('filters')
+            //     .appendTo('#example1 thead');
 
-            var table = $('#example1').DataTable({
-                orderCellsTop: true,
-                fixedHeader: true,
-                initComplete: function() {
-                    var api = this.api();
+            // var table = $('#example1').DataTable({
+            //     orderCellsTop: true,
+            //     fixedHeader: true,
+            //     initComplete: function() {
+            //         var api = this.api();
 
-                    // For each column
-                    api
-                        .columns()
-                        .eq(0)
-                        .each(function(colIdx) {
+            //         // For each column
+            //         api
+            //             .columns()
+            //             .eq(0)
+            //             .each(function(colIdx) {
 
-                            if (colIdx == 4) {
-                                return true
-                            }
+            //                 if (colIdx == 4) {
+            //                     return true
+            //                 }
 
-                            // Set the header cell to contain the input element
-                            var cell = $('.filters th').eq(
-                                $(api.column(colIdx).header()).index()
-                            );
-                            var title = $(cell).text();
-                            $(cell).html('<input type="text" placeholder="' + title + '" />');
+            //                 // Set the header cell to contain the input element
+            //                 var cell = $('.filters th').eq(
+            //                     $(api.column(colIdx).header()).index()
+            //                 );
+            //                 var title = $(cell).text();
+            //                 $(cell).html('<input type="text" placeholder="' + title + '" />');
 
-                            // On every keypress in this input
-                            $('input',
-                                    $('.filters th').eq($(api.column(colIdx).header()).index())
-                                )
-                                .off('keyup change')
-                                .on('change', function(e) {
-                                    // Get the search value
-                                    $(this).attr('title', $(this).val());
-                                    var regexr = '({search})'; //$(this).parents('th').find('select').val();
+            //                 // On every keypress in this input
+            //                 $('input',
+            //                         $('.filters th').eq($(api.column(colIdx).header()).index())
+            //                     )
+            //                     .off('keyup change')
+            //                     .on('change', function(e) {
+            //                         // Get the search value
+            //                         $(this).attr('title', $(this).val());
+            //                         var regexr = '({search})'; //$(this).parents('th').find('select').val();
 
-                                    var cursorPosition = this.selectionStart;
-                                    // Search the column for that value
-                                    api
-                                        .column(colIdx)
-                                        .search(
-                                            this.value != '' ?
-                                            regexr.replace('{search}', '(((' + this.value + ')))') :
-                                            '',
-                                            this.value != '',
-                                            this.value == ''
-                                        )
-                                        .draw();
-                                })
-                                .on('keyup', function(e) {
-                                    e.stopPropagation();
+            //                         var cursorPosition = this.selectionStart;
+            //                         // Search the column for that value
+            //                         api
+            //                             .column(colIdx)
+            //                             .search(
+            //                                 this.value != '' ?
+            //                                 regexr.replace('{search}', '(((' + this.value + ')))') :
+            //                                 '',
+            //                                 this.value != '',
+            //                                 this.value == ''
+            //                             )
+            //                             .draw();
+            //                     })
+            //                     .on('keyup', function(e) {
+            //                         e.stopPropagation();
 
-                                    $(this).trigger('change');
-                                    $(this)
-                                        .focus()[0]
-                                        .setSelectionRange(cursorPosition, cursorPosition);
-                                });
-                        });
-                },
+            //                         $(this).trigger('change');
+            //                         $(this)
+            //                             .focus()[0]
+            //                             .setSelectionRange(cursorPosition, cursorPosition);
+            //                     });
+            //             });
+            //     },
+            // });
+
+            $('#example1').DataTable({
+                paging: false,
+                ordering: false,
+                info: false,
             });
         });
     </script>

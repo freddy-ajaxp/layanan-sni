@@ -4,23 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Cari SNI</title>
+    <title>AdminLTE 3 | Notifikasi</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
-    <!-- Select2 -->
-    <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
 </head>
 
 <body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -196,107 +196,72 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Statistik - Uker D11</h1>
+                            <h1>Notifikasi</h1>
                         </div>
-                        <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Statistik</a></li>
-                                <li class="breadcrumb-item"><a href="#">Statistik Unit Kerja</a></li>
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Daftar Notifikasi</li>
                             </ol>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
-
-            <!-- Main content -->
-            <section class="content">
-                <div class="container-fluid">
-                    <!-- Small boxes (Stat box) -->
-                    <div class="row">
-
-                    </div>
-                    <!-- /.row -->
-                    <!-- <button class="btn btn-danger" id="update">TEST</button> -->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header border-0">
-                                    <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">Jumlah Pengunjung</h3>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex">
-                                        <p class="d-flex flex-column">
-                                            <span class="text-bold text-lg">72</span>
-                                            <span>Total Kunjungan</span>
-                                        </p>
-
-                                    </div>
-                                    <!-- /.d-flex -->
-
-                                    <div class="position-relative mb-4">
-                                        <canvas id="accessChart" height="200"></canvas>
-                                    </div>
-
-                                    <div class="d-flex flex-row justify-content-end">
-                                        <span class="mr-2">
-                                            <i class="fas fa-square text-primary"></i> Jumlah Akses
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.card -->
-
-
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header border-0">
-                                    <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">Jumlah Unduh</h3>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex">
-                                        <p class="d-flex flex-column">
-                                            <span class="text-bold text-lg">2</span>
-                                            <span>Jumlah Unduh Total</span>
-                                        </p>
-
-                                    </div>
-                                    <!-- /.d-flex -->
-
-                                    <div class="position-relative mb-4">
-                                        <canvas id="downloadChart" height="200"></canvas>
-                                    </div>
-
-                                    <div class="d-flex flex-row justify-content-end">
-                                        <span>
-                                            <i class="fas fa-square text-gray"></i> Jumlah Unduh
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.card -->
-
-
                         </div>
                     </div>
                 </div>
                 <!-- /.container-fluid -->
             </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- Default box -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Daftar Notifikasi</h3>
+
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 table-responsive">
+                                <table id="example1" class="table table-bordered table-hover display">
+                                    <thead>
+                                        <tr>
+                                            <th>Tanggal</th>
+                                            <th>Pesan Notifikasi</th>
+
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3-Aug-2022</td>
+                                            <td>Permohonan Ditangguhkan (hold)</td>
+                                            <td>
+                                                <a href="permohonan-saya.html" target="__blank">
+                                                    <button class="btn btn-default sm"><i class="fas fa-eye"></i> detail</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </section>
             <!-- /.content -->
         </div>
+        <!-- /.content-wrapper -->
 
         <footer class="main-footer ">
             <div class="float-right d-none d-sm-block ">
@@ -317,27 +282,96 @@
     <script src="../plugins/jquery/jquery.min.js "></script>
     <!-- Bootstrap 4 -->
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
-    <!-- Select2 -->
-    <script src="../plugins/select2/js/select2.full.min.js "></script>
     <!-- DataTables  & Plugins -->
-    <script src="../plugins/datatables/jquery.dataTables.min.js "></script>
-    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js "></script>
-    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js "></script>
-    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js "></script>
-    <script src="../plugins/jszip/jszip.min.js "></script>
-    <script src="../plugins/pdfmake/pdfmake.min.js "></script>
-    <script src="../plugins/pdfmake/vfs_fonts.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.print.min.js "></script>
-    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js "></script>
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../plugins/jszip/jszip.min.js"></script>
+    <script src="../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js "></script>
-    <!-- OPTIONAL SCRIPTS -->
-    <script src="../plugins/chart.js/Chart.min.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../dist/js/pages/statistik-uker.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            // Setup - add a text input to each footer cell
+            // $('#example1 thead tr')
+            //     .clone(true)
+            //     .addClass('filters')
+            //     .appendTo('#example1 thead');
+
+            // var table = $('#example1').DataTable({
+            //     orderCellsTop: true,
+            //     fixedHeader: true,
+            //     initComplete: function() {
+            //         var api = this.api();
+
+            //         // For each column
+            //         api
+            //             .columns()
+            //             .eq(0)
+            //             .each(function(colIdx) {
+
+            //                 if (colIdx == 4) {
+            //                     return true
+            //                 }
+
+            //                 // Set the header cell to contain the input element
+            //                 var cell = $('.filters th').eq(
+            //                     $(api.column(colIdx).header()).index()
+            //                 );
+            //                 var title = $(cell).text();
+            //                 $(cell).html('<input type="text" placeholder="' + title + '" />');
+
+            //                 // On every keypress in this input
+            //                 $('input',
+            //                         $('.filters th').eq($(api.column(colIdx).header()).index())
+            //                     )
+            //                     .off('keyup change')
+            //                     .on('change', function(e) {
+            //                         // Get the search value
+            //                         $(this).attr('title', $(this).val());
+            //                         var regexr = '({search})'; //$(this).parents('th').find('select').val();
+
+            //                         var cursorPosition = this.selectionStart;
+            //                         // Search the column for that value
+            //                         api
+            //                             .column(colIdx)
+            //                             .search(
+            //                                 this.value != '' ?
+            //                                 regexr.replace('{search}', '(((' + this.value + ')))') :
+            //                                 '',
+            //                                 this.value != '',
+            //                                 this.value == ''
+            //                             )
+            //                             .draw();
+            //                     })
+            //                     .on('keyup', function(e) {
+            //                         e.stopPropagation();
+
+            //                         $(this).trigger('change');
+            //                         $(this)
+            //                             .focus()[0]
+            //                             .setSelectionRange(cursorPosition, cursorPosition);
+            //                     });
+            //             });
+            //     },
+            // });
+
+            $('#example1').DataTable({
+                paging: false,
+                ordering: false,
+                info: false,
+            });
+        });
+    </script>
 </body>
 
 </html>

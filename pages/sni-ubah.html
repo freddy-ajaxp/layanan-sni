@@ -59,6 +59,7 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
             <a href="../index.html" class="brand-link">
                 <img src="../dist/img/sni.png" alt="AdminLTE Logo" class="brand-image img-bordered elevation-3" style="opacity: .8; background-color: #FFFFFF;">
                 <span class="brand-text font-weight-light">Layanan SNI</span>
@@ -85,6 +86,14 @@
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/notifikasi-saya.html" class="nav-link">
+                                <i class="nav-icon fas fa-bell"></i>
+                                <p>
+                                    Notifikasi
                                 </p>
                             </a>
                         </li>
@@ -117,84 +126,33 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/permohonan-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
-                                <p>
-                                    Permohonan
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Permohonan User</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/permohonan-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan User</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Lainnya
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                        <li class="nav-item">
+                            <a href="../pages/statistik.html" class="nav-link">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>Statistik</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/statistik.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Statistik</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
                                 <i class="nav-icon fas fa-tools"></i>
-                                <p>
-                                    Aplikasi
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Pengaturan Petunjuk</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-petunjuk.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Petunjuk</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/pengaturan-watermark.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengaturan Watermark</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
                         <li class="nav-header">MENU USER</li>
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item">
+                            <a href="../pages/sni-user.html" class="nav-link">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>
-                                    SNI
-                                    <i class="right fas fa-angle-left"></i>
+                                    Baca SNI
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../pages/sni-user.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>
-                                            SNI
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item ">
                             <a href="#" class="nav-link">
@@ -208,7 +166,7 @@
                                 <li class="nav-item">
                                     <a href="../pages/permohonan-unduh-baru.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Permohonan Unduh Baru</p>
+                                        <p>Permohonan Dokumen</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -288,8 +246,32 @@
                                                     <input type="email" class="form-control" id="exampleInputEmail1" value="SNI ISO/IEC 27001:2013">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Tahun Terbit</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" value="2013">
+                                                    <label>Tahun Terbit</label>
+                                                    <select class="form-control select2" style="width: 100%;">
+                                                    <option value="2000">2000</option>
+                                                    <option value="2001">2001</option>
+                                                    <option value="2002">2002</option>
+                                                    <option value="2003">2003</option>
+                                                    <option value="2004">2004</option>
+                                                    <option value="2005">2005</option>
+                                                    <option value="2006">2006</option>
+                                                    <option value="2007">2007</option>
+                                                    <option value="2008">2008</option>
+                                                    <option value="2009">2009</option>
+                                                    <option value="2010">2010</option>
+                                                    <option value="2011">2011</option>
+                                                    <option value="2012">2012</option>
+                                                    <option value="2013">2013</option>
+                                                    <option value="2014">2014</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2022">2022</option>
+                                                    </select>
                                                 </div>
 
                                             </div>
@@ -307,6 +289,7 @@
                                                     <select class="form-control select2" style="width: 100%;">
                                                     <option>Dasar</option>
                                                     <option>Amandemen</option>
+                                                    <option>Correction</option>
                                                 </select>
                                                 </div>
                                                 <label for="exampleInputFile">File input</label>
